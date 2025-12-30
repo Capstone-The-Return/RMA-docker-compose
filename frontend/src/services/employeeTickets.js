@@ -1,5 +1,6 @@
 const API_URL = import.meta.env.VITE_API_URL;
 
+console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
 
 export const getAllTickets = async () => {
   const res = await fetch(`${API_URL}/tickets`);
