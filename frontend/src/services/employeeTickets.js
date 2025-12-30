@@ -1,13 +1,13 @@
-const BASE = 'http://localhost:3000/tickets';
+const API_URL = import.meta.env.VITE_API_URL;
 
 
 export const getAllTickets = async () => {
-  const res = await fetch(BASE);
+  const res = await fetch(`${API_URL}/tickets`);
   return res.json();
 };
 
 export const createTicket = async (data) => {
-  const res = await fetch(BASE, {
+  const res = await fetch(`${API_URL}/tickets`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -20,7 +20,7 @@ export const createTicket = async (data) => {
 };
 
 export const updateTicket = async (id, data) => {
-  const res = await fetch(`${BASE}/${id}`, {
+  const res = await fetch(`${API_URL}/tickets/${id}`, {
     method: 'PATCH',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data)
@@ -34,5 +34,5 @@ export const updateTicket = async (id, data) => {
 
 
 export const deleteTicket = async id => {
-  await fetch(`${BASE}/${id}`, { method: 'DELETE' });
+  await fetch(`${API_URL}/tickets/${id}`, { method: 'DELETE' });
 };
