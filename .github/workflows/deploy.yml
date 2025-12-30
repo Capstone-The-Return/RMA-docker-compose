@@ -12,9 +12,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Create .env.production 
-      run: | 
-        echo "VITE_API_URL=${{ vars.VITE_API_URL }}" >> .env.production
+    - name: Create .env.production
+      run: |
+        echo "VITE_API_URL=${{ vars.VITE_API_URL }}" >> frontend/.env.production
+        echo "VITE_PUBLIC_KEY=${{ vars.VITE_PUBLIC_KEY }}" >> frontend/.env.production
+        echo "VITE_SERVICE_ID=${{ vars.VITE_SERVICE_ID }}" >> frontend/.env.production
+        echo "VITE_TEMPLATE_ID_GENERIC=${{ vars.VITE_TEMPLATE_ID_GENERIC }}" >> frontend/.env.production
+        echo "VITE_TEMPLATE_ID_PASSWORD_RESET=${{ vars.VITE_TEMPLATE_ID_PASSWORD_RESET }}" >> frontend/.env.production
 
     - name: Copy files to EC2
       uses: appleboy/scp-action@v0.1.7
