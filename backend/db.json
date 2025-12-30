@@ -1,0 +1,216 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "role": "employee",
+      "name": "Employee Admin",
+      "email": "employee@test.com",
+      "password": "employee123"
+    },
+    {
+      "id": "2",
+      "role": "technician",
+      "name": "Tech One",
+      "password": "technical123"
+    },
+    {
+      "id": "3",
+      "role": "technician",
+      "name": "Tech Two",
+      "email": "technician@test.com",
+      "password": "technical321"
+    },
+    {
+      "id": "4",
+      "role": "customer",
+      "email": "customer@test.com",
+      "password": "customer123"
+    }
+  ],
+  "tickets": [
+    {
+      "id": "1",
+      "rma": "RMA-001",
+      "customer": {
+        "name": "Maria P."
+      },
+      "product": {
+        "name": "Laptop"
+      },
+      "status": "pending",
+      "warranty": true,
+      "issue": "Screen flickering",
+      "assigned_to": "Tech One",
+      "priority": "high",
+      "notes": "Customer reported issue started after recent update.",
+      "phone": "+30 2101234567",
+      "email": "akes@gmail.com",
+      "address": "123 Main St, Athens, Greece",
+      "serial_number": "SN123456789",
+      "purchase_date": "2023-11-15",
+      "photo_url": "https://example.com/photos/rma-001.jpg",
+      "owner": "Anasasia Kesisi",
+      "last_updated": "2024-06-10T15:30:00Z",
+      "created_at": "2024-06-01T10:00:00Z",
+      "technical_status": null,
+      "record_type": "repair"
+    },
+    {
+      "id": "2",
+      "rma": "RMA-002",
+      "customer": {
+        "name": "John D."
+      },
+      "product": {
+        "name": "TV"
+      },
+      "status": "in-repair",
+      "warranty": true,
+      "issue": "Screen flickering",
+      "assigned_to": "Tech One",
+      "priority": "high",
+      "notes": "Customer reported issue started after recent update.",
+      "phone": "+30 2101234567",
+      "email": "akes@gmail.com",
+      "address": "123 Main St, Athens, Greece",
+      "serial_number": "SN123456789",
+      "purchase_date": "2023-11-15",
+      "photo_url": "https://example.com/photos/rma-001.jpg",
+      "owner": "Anasasia Kesisi",
+      "last_updated": "2024-06-10T15:30:00Z",
+      "created_at": "2024-06-01T10:00:00Z",
+      "technical_status": "Completed"
+    },
+    {
+      "id": "3",
+      "rma": "RMA-003",
+      "customer": {
+        "name": "Anna K."
+      },
+      "product": {
+        "name": "Mouse"
+      },
+      "status": "in-repair",
+      "warranty": true,
+      "issue": "Screen flickering",
+      "assigned_to": "Tech Two",
+      "priority": "high",
+      "notes": "Customer reported issue started after recent update.",
+      "phone": "+30 2101234567",
+      "email": "akes@gmail.com",
+      "address": "123 Main St, Athens, Greece",
+      "serial_number": "SN123456789",
+      "purchase_date": "2023-11-15",
+      "photo_url": "https://example.com/photos/rma-001.jpg",
+      "owner": "Anasasia Kesisi",
+      "last_updated": "2024-06-10T15:30:00Z",
+      "created_at": "2024-06-01T10:00:00Z",
+      "technical_status": "Approved",
+      "record_type": "repair"
+    },
+    {
+      "id": "4",
+      "rma": "RMA-004",
+      "customer": {
+        "name": "Nick S."
+      },
+      "product": {
+        "name": "Keyboard"
+      },
+      "status": "completed",
+      "warranty": true,
+      "issue": "Screen flickering",
+      "assigned_to": "Tech Two",
+      "priority": "high",
+      "notes": "Customer reported issue started after recent update.",
+      "phone": "+30 2101234567",
+      "email": "akes@gmail.com",
+      "address": "123 Main St, Athens, Greece",
+      "serial_number": "SN123456789",
+      "purchase_date": "2023-11-15",
+      "photo_url": "https://example.com/photos/rma-001.jpg",
+      "owner": "Anasasia Kesisi",
+      "last_updated": "2024-06-10T15:30:00Z",
+      "created_at": "2024-06-01T10:00:00Z",
+      "technical_status": "completed",
+      "record_type": "repair"
+    },
+    {
+      "id": "5",
+      "rma": "RMA-005",
+      "customer": {
+        "name": "Dimi S."
+      },
+      "product": {
+        "name": "Keyboard"
+      },
+      "status": "in-repair",
+      "warranty": true,
+      "issue": "Screen flickering",
+      "assigned_to": "Tech Two",
+      "priority": "high",
+      "notes": "Customer reported issue started after recent update.",
+      "phone": "+30 2101234567",
+      "email": "akes@gmail.com",
+      "address": "123 Main St, Athens, Greece",
+      "serial_number": "SN123456789",
+      "purchase_date": "2023-11-15",
+      "photo_url": "https://example.com/photos/rma-001.jpg",
+      "owner": "Anasasia Kesisi",
+      "last_updated": "2024-06-10T15:30:00Z",
+      "created_at": "2024-06-01T10:00:00Z",
+      "technical_status": null,
+      "record_type": "repair"
+    },
+    {
+      "id": "6",
+      "rma": "RMA-006",
+      "customer": {
+        "name": "Dimi S."
+      },
+      "product": {
+        "name": "Keyboard"
+      },
+      "date": "2024-12-03",
+      "issue": "Screen flickering intermittently, especially when displaying dark content",
+      "status": "in-repair",
+      "priority": "High",
+      "assignedTo": "Unassigned",
+      "technical_status": "Pending",
+      "record_type": "repair"
+    },
+    {
+      "id": "7",
+      "rma": "RMA-007",
+      "customer": {
+        "name": "Dimi S."
+      },
+      "product": {
+        "name": "Keyboard"
+      },
+      "date": "2024-12-02",
+      "issue": "Left speaker producing crackling sound at high volume",
+      "status": "in-repair",
+      "priority": "Medium",
+      "assignedTo": "Technician 001",
+      "technical_status": "In Repair",
+      "record_type": "repair"
+    },
+    {
+      "id": "ed1b",
+      "rma": "RMA-2025-1CE456F3",
+      "customer": {
+        "name": "sxs scascsac"
+      },
+      "product": {
+        "name": "5165"
+      },
+      "status": "approved",
+      "record_type": "return",
+      "issue": "scascdc dsv",
+      "warranty": "InWarranty",
+      "phone": "62651464165",
+      "email": "ws@gmail.com"
+    }
+  ]
+}

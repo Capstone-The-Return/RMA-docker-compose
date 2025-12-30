@@ -1,0 +1,24 @@
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+.mainContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Για να μην "ξεχειλίζει" */
+}
+
+/* Στοχεύουμε τον Slider για να μικρύνει */
+.mainContent :global(.carousel-item img) {
+  max-height: 400px; /* Ρύθμισε το ύψος όσο θέλεις */
+  object-fit: cover; /* Για να μην παραμορφώνονται οι εικόνες */
+}
+
+.bottomForm {
+  margin-top: auto; /* Αυτό σπρώχνει τη φόρμα στο τέρμα της στήλης */
+  padding: 10px;
+}

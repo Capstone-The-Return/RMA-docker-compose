@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  justify-content: center; /* Κεντράρει το περιεχόμενο */
+  align-items: center;
+  padding: 0 2rem;
+  height: 80px;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  color: #f7f7f7;
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Για να τοποθετήσουμε το logout δεξιά */
+}
+
+.logo-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logoutButton {
+  position: absolute;
+  right: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #f7f7f7;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icon:hover {
+  animation: pulseGlow 1.2s infinite;
+}
+
+.headertext {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  user-select: none;
+}

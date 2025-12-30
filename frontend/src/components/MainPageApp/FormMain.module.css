@@ -1,0 +1,91 @@
+.formsWrapper {
+    display: flex;
+    justify-content: center; 
+    gap: 30px; 
+    padding: 20px;
+    flex-wrap: wrap; 
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    flex: 1; 
+    max-width: 450px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    border-top: 5px solid #003366;
+}
+
+
+.card:first-child {
+    border-top-color: #007bff;
+}
+
+.contactTitle {
+    color: #003366;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.contactText {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    min-height: 40px; 
+}
+
+.formGroup {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.input, .textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+.textarea {
+    height: 100px;
+    resize: none;
+}
+
+.submitBtn, .searchBtn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: auto; 
+}
+
+.submitBtn {
+    background-color: #003366;
+    color: white;
+}
+
+.searchBtn {
+    background-color: #007bff;
+    color: white;
+}
+
+.submitBtn:hover, .searchBtn:hover {
+    opacity: 0.9;
+}

@@ -1,0 +1,107 @@
+.container {
+    font-family: 'Poppins', sans-serif;
+    padding: 20px;
+}
+
+/* Το "κλειδί" για να μπουν δίπλα-δίπλα */
+.headerRow {
+    display: flex;
+    justify-content: space-between; /* Σπρώχνει τον τίτλο αριστερά και το κουμπί δεξιά */
+    align-items: center; /* Τα ευθυγραμμίζει κάθετα στο κέντρο */
+    margin-bottom: 20px;
+    flex-wrap: wrap; /* Για να μην "σπάει" σε πολύ μικρές οθόνες */
+    gap: 15px;
+}
+
+.title {
+    color: #003366;
+    margin: 0; /* Αφαιρούμε τα default περιθώρια */
+    font-size: 1.6rem;
+    font-weight: 600;
+}
+
+.mainLoginBtn {
+    background-color: #003366;
+    color: white;
+    padding: 8px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mainLoginBtn:hover {
+    background-color: #001a33;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.featuresContainer {
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.featuresMainTitle {
+    color: #003366;
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.featuresGrid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.featureCard {
+    background: white;
+    padding: 30px 20px;
+    border-radius: 15px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 4px solid #f0f0f0;
+}
+
+.featureCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0, 51, 102, 0.1);
+    border-bottom: 4px solid #003366;
+}
+
+.featureIcon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.featureCard h4 {
+    color: #003366;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.featureCard p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Διακριτικά χρώματα για τα εικονίδια */
+.speedIcon { color: #ffcc00; }
+.transparencyIcon { color: #007bff; }
+.efficiencyIcon { color: #28a745; }

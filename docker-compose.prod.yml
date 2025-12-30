@@ -1,0 +1,15 @@
+services:
+  backend:
+    build:
+      dockerfile: Dockerfile.production
+    volumes:
+      - db_data:/db.json
+    
+  frontend:
+    build:
+      dockerfile: Dockerfile.production
+    ports: 
+      - "80:80"
+
+volumes: 
+  db_data:

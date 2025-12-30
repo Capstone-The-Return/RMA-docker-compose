@@ -1,0 +1,232 @@
+/*
+ * This file contains the styles extracted from the LoginPage component.
+ * It combines inline styles and Tailwind CSS utility classes.
+ */
+
+/* Main Container (min-h-screen flex flex-col) with inline background */
+.mainContainer {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(135deg, #ece9e6, #ffffff);
+}
+
+/* Content Wrapper (flex-1 flex items-center justify-center p-4) */
+.contentWrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* p-4 */
+}
+
+/* Form Container Wrapper (w-full max-w-md) */
+.formContainerWrapper {
+    width: 100%;
+    max-width: 28rem; /* max-w-md */
+}
+
+/* Login Form (bg-white rounded-2xl p-10 transition-transform duration-300 hover:-translate-y-2) with inline box-shadow */
+.loginForm {
+    background-color: white;
+    border-radius: 1rem; /* rounded-2xl */
+    padding: 2.5rem; /* p-10 */
+    transition: transform 300ms ease-in-out;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.loginForm:hover {
+    transform: translateY(-0.5rem); /* hover:-translate-y-2 */
+}
+
+/* Header (flex flex-col items-center mb-10) */
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2.5rem; /* mb-10 */
+}
+
+/* Logo Wrapper (p-3 rounded-full mb-4) with inline background */
+.logoWrapper {
+    padding: 0.75rem; /* p-3 */
+    border-radius: 9999px; /* rounded-full */
+    margin-bottom: 1rem; /* mb-4 */
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+}
+
+/* Logo Icon (w-8 h-8 text-white) */
+.logoIcon {
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+    color: white; /* text-white */
+}
+
+/* Title (text-gray-900 mb-2) with inline font-weight and font-size */
+.title {
+    color: #111827; /* text-gray-900 */
+    margin-bottom: 0.5rem; /* mb-2 */
+    font-weight: 700;
+    font-size: 2rem;
+    letter-spacing: 1px;
+}
+
+/* Subtitle (text-gray-600) */
+.subtitle {
+    color: #4b5563; /* text-gray-600 */
+}
+
+/* Role Selection Group (mb-8) */
+.roleSelection {
+    margin-bottom: 2rem; /* mb-8 */
+}
+
+/* Role Label (block text-gray-600 mb-3) with inline font-weight and font-size */
+.roleLabel {
+    display: block;
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.75rem; /* mb-3 */
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Role Button Grid (grid grid-cols-2 gap-3) */
+.roleButtonGrid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* grid-cols-2 */
+    gap: 0.75rem; /* gap-3 */
+}
+
+/* Role Button Base (p-3 rounded-lg border-2 transition-all duration-300) */
+.roleButton {
+    padding: 0.75rem; /* p-3 */
+    border-radius: 0.5rem; /* rounded-lg */
+    border-width: 2px; /* border-2 */
+    transition: all 300ms ease-in-out;
+    font-weight: 600; /* extracted from inline styles for both states */
+}
+
+/* Inactive Role Button Styles (border-gray-200 bg-white text-gray-600 hover:border-gray-300 hover:scale-105) */
+.roleButtonInactive {
+    border-color: #e5e7eb; /* border-gray-200 */
+    background-color: white; /* bg-white */
+    color: #4b5563; /* text-gray-600 */
+}
+
+.roleButtonInactive:hover {
+    border-color: #d1d5db; /* hover:border-gray-300 */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+/* Active Role Button Styles (bg-gray-700 text-white scale-105) with inline styles */
+.roleButtonActive {
+    color: white; /* text-white */
+    transform: scale(1.05); /* scale-105 */
+    /* Inline styles for active state */
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    border-color: #2c5364;
+}
+
+/* Input Group Wrapper for Email (mb-8 relative) */
+.inputGroup {
+    margin-bottom: 2rem; /* mb-8 */
+    position: relative; /* relative */
+}
+
+/* Input Group Wrapper for Password (mb-10 relative) */
+.inputGroupPassword {
+    position: relative; /* relative */
+}
+
+/* Input Label (block text-gray-600 mb-2) with inline font-weight and font-size */
+.inputLabel {
+    display: block;
+    color: #4b5563; /* text-gray-600 */
+    margin-bottom: 0.5rem; /* mb-2 */
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* Text Input (w-full py-2 border-0 border-b-2 border-gray-300 outline-none transition-colors duration-300 bg-transparent) with inline font-size */
+.textInput {
+    width: 100%; /* w-full */
+    padding-top: 0.5rem; /* py-2 */
+    padding-bottom: 0.5rem; /* py-2 */
+    border: 0; /* border-0 */
+    border-bottom: 2px solid #d1d5db; /* border-b-2 border-gray-300 */
+    outline: none; /* outline-none */
+    transition: border-bottom-color 300ms ease-in-out; /* transition-colors duration-300 */
+    background-color: transparent; /* bg-transparent */
+    font-size: 1.1rem;
+}
+
+/* Login Button (w-full py-3 border-0 rounded-full text-white transition-all duration-400 hover:scale-105) with inline styles */
+.loginButton {
+    width: 100%; /* w-full */
+    padding-top: 0.75rem; /* py-3 */
+    padding-bottom: 0.75rem; /* py-3 */
+    border: 0; /* border-0 */
+    border-radius: 9999px; /* rounded-full */
+    color: white; /* text-white */
+    transition: all 400ms ease-in-out;
+    cursor: pointer; /* extracted from inline style */
+    margin-top: 20px;
+
+    /* Inline styles */
+    background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(44, 83, 100, 0.6);
+}
+
+.loginButton:hover {
+    transform: scale(1.05); /* hover:scale-105 is now part of JSX logic */
+    /* Hover styles are now handled via onMouseEnter/onMouseLeave in JSX
+       since they involve dynamic linear gradients and box-shadows.
+       A simpler CSS version would be:
+       background: linear-gradient(90deg, #203a43, #2c5364, #0f2027);
+       box-shadow: 0 8px 25px rgba(44, 83, 100, 0.9), 0 0 15px rgba(32, 58, 67, 0.8);
+    */
+}
+
+/* Login Button Content (flex items-center justify-center gap-2) */
+.loginButtonContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; /* gap-2 */
+}
+
+/* Forgot Password Wrapper (mt-4 text-center) */
+.forgotPasswordWrapper {
+    margin-top: 1rem; /* mt-4 */
+    text-align: center; /* text-center */
+}
+
+/* Forgot Password Button (text-gray-600 hover:text-gray-900 transition-colors) with inline text-decoration */
+.forgotPasswordButton {
+    color: #4b5563; /* text-gray-600 */
+    transition: color 150ms ease-in-out; /* transition-colors */
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline; /* extracted from inline style */
+}
+
+.forgotPasswordButton:hover {
+    color: #111827; /* hover:text-gray-900 */
+}
+
+/* Demo Message Wrapper (mt-6 pt-6 border-t border-gray-200) */
+.demoMessageWrapper {
+    margin-top: 1.5rem; /* mt-6 */
+    padding-top: 1.5rem; /* pt-6 */
+    border-top: 1px solid #e5e7eb; /* border-t border-gray-200 */
+}
+
+/* Demo Message (text-gray-500 text-center) */
+.demoMessage {
+    color: #6b7280; /* text-gray-500 */
+    text-align: center; /* text-center */
+}

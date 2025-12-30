@@ -1,0 +1,12 @@
+.layout {
+  display: flex;
+  min-height: calc(100vh - 120px);
+}
+
+.content {
+  flex: 1;
+  min-width: 0; /* IMPORTANT: prevents content going under the sidebar */
+  padding: clamp(16px, 2vw, 28px);
+  background: #f8fafc;
+  overflow-x: hidden;
+}

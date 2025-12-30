@@ -1,0 +1,89 @@
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  height: 740px; /* AppBar + FooterApp χώρος */
+  background: var(--nav-bg);
+  color: var(--text-light);
+
+  padding: 1rem 0.6rem;
+  border-radius: 14px;
+
+  box-shadow: 0 6px 18px rgba(44, 83, 100, 0.35);
+
+  transition: width 0.35s ease-in-out;
+
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* expanded mode */
+.open {
+  width: 250px;
+}
+
+/* collapsed mode */
+.closed {
+  width: 80px;
+}
+
+/* ---- Toggle Button ---- */
+.toggleBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  cursor: pointer;
+
+  margin: 0.4rem 0 1.5rem 0.2rem;
+
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.toggleBtn:hover {
+  background: var(--hover);
+}
+
+/* ---- Menu Items ---- */
+.menuList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.menuItem,
+.menuItemLogout {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  width: 100%;
+  padding: 0.9rem 0.8rem;
+
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.menuItem:hover,
+.menuItemLogout:hover {
+  background: var(--hover);
+  transform: scale(1.02);
+}
+
+/* Logout has slight red tint */
+.menuItemLogout:hover {
+  background: rgba(255, 80, 80, 0.15);
+}
+
+/* Icons stay visible even when collapsed */
+.icon {
+  font-size: 20px;
+}

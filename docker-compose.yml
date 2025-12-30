@@ -1,0 +1,28 @@
+services:
+  backend:
+    container_name: capstone-rma-backend
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./backend/db.json:/db.json
+    networks:
+      - rma-network
+
+  frontend:
+    container_name: capstone-rma-frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    depends_on:
+      - backend
+    ports:
+      - "5173:5173"
+    networks:
+      - rma-network
+
+networks:
+  rma-network:
+    driver: bridge
