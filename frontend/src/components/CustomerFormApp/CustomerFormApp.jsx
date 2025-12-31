@@ -50,10 +50,21 @@ function Warranty(purchaseDateStr) {
 
 function RmaCode() {
   let year = new Date().getFullYear();
-  let id = crypto.randomUUID();
+
+  let id;
+  if (crypto.randomUUID) {
+    id = crypto.randomUUID();
+  } else {
+    // fallback for HTTP or older browsers
+    id = ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c =>
+      (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)
+    );
+  }
+
   let shortId = id.slice(0, 8).toUpperCase();
   return "RMA-" + year + "-" + shortId;
 }
+
 
 async function fakeUpload(file) {
   if (file == null) return null;
