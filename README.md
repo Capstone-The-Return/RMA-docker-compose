@@ -1,8 +1,8 @@
 # Readme
 ## Configuration 
-docker-compose.yml Contains the common configuration for both frontend and backend
-docker-compose.dev.yml Contains configuration explicitly for the local dev environments
-docker-compose.dev.yml Contains configuration explicitly for the production environment
+docker-compose.yml - Contains the common configuration for both frontend and backend<br>
+docker-compose.dev.yml - Contains configuration explicitly for the local dev environments<br>
+docker-compose.dev.yml - Contains configuration explicitly for the production environment
 
 ## Run on local
 <pre>
