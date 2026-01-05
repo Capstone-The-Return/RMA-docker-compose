@@ -10,6 +10,9 @@ services:
       - ./backend/db.json:/db.json
     networks:
       - rma-network
+    mem_limit: 128m 
+    cpus: 0.25 
+
 
   frontend:
     container_name: capstone-rma-frontend
@@ -22,6 +25,8 @@ services:
       - "5173:5173"
     networks:
       - rma-network
+    mem_limit: 256m 
+    cpus: 0.5 
 
 networks:
   rma-network:
