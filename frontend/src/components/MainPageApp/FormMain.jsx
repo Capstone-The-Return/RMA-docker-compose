@@ -1,6 +1,7 @@
 import { useState } from "react";
 import style from "./FormMain.module.css";
 
+const API_URL = import.meta.env.VITE_API_URL;
 
 const STEPS = ["Submitted", "Approved", "In Repair", "Completed"];
 
@@ -74,7 +75,7 @@ export default function FormMain() {
         setTicket(null);
 
         try {
-            const res = await fetch(`http://localhost:4000/tickets?rma=${rma.trim()}`);
+            const res = await fetch(`${API_URL}/tickets?rma=${rma.trim()}`);
             const data = await res.json();
             
             if (data.length > 0) {
