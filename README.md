@@ -2,7 +2,7 @@
 ## Configuration 
 docker-compose.yml - Contains the common configuration for both local dev and production<br>
 docker-compose.dev.yml - Contains configuration explicitly for the local dev environments<br>
-docker-compose.dev.yml - Contains configuration explicitly for the production environment
+docker-compose.prod.yml - Contains configuration explicitly for the production environment
 
 ## Before first run on local
 There is a .env.example file in the repository. You need to make a copy of it, and name it .env. After that open the .env and add the needed values to the variables.
