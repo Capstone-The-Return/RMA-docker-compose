@@ -1,0 +1,120 @@
+.container {
+  min-height: 100vh;
+  padding: 2rem;
+  background: #f5f7fb;
+  font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.headerIcon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #0f2027;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 20px;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.subtitle {
+  margin: 0.15rem 0 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.chartWrap {
+  width: 100%;
+}
+
+.legendHint {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 0.85rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.performanceCard {
+  margin-top: 1rem;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #e6eaf2;
+  padding: 1rem;
+}
+
+.performanceTitle {
+  margin: 0 0 0.75rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.performanceGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  gap: 0.75rem;
+}
+
+.metric {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.75rem;
+  border: 1px solid #eef2f7;
+}
+
+.metricTitle {
+  color: #334155;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.metricValue {
+  margin-top: 0.35rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.metricDelta {
+  margin-top: 0.15rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.accent_green { border-left: 4px solid #22c55e; }
+.accent_blue { border-left: 4px solid #3b82f6; }
+.accent_orange { border-left: 4px solid #f97316; }
+
+@media (max-width: 1100px) {
+  .statsGrid { grid-template-columns: repeat(2, 1fr); }
+  .grid2 { grid-template-columns: 1fr; }
+  .performanceGrid { grid-template-columns: 1fr; }
+}

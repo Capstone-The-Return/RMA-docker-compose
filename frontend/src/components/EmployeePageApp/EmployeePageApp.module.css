@@ -12,13 +12,19 @@
 /* Header πιο «βαρύ» και μοντέρνο */
 .headerHeavy {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  font-weight: 800;
-  font-size: 2.4rem;
-  color:linear-gradient(90deg, #0f2027, #203a43, #2c5364);
-  margin-bottom: 0.25rem;
-  user-select: none;
+  margin-bottom: 0.5rem;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerLeft h1 {
+  margin: 0;
 }
 
 .iconLarge {
@@ -32,9 +38,8 @@
 /* Tabs */
 .tabs {
   display: flex;
-  gap: 1rem;
+  gap: 0.5rem;
   margin-bottom: 1rem;
-  user-select: none;
 }
 
 .tabButton {
@@ -353,4 +358,165 @@
   opacity: 0.5;
   box-shadow: none;
   transform: none;
+}
+
+/* Tabs row - flex container for tabs and notification */
+.tabsRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+/* Notification wrapper */
+.notifWrap {
+  position: relative;
+}
+
+.notifButton {
+  position: relative;
+  background: transparent;
+  border: 2px solid #e2e8f0;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.notifButton:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.bellIcon {
+  font-size: 1.4rem;
+  color: #475569;
+}
+
+.notifBadge {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: #ef4444;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Notification dropdown */
+.notifDropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 360px;
+  max-height: 450px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e2e8f0;
+  z-index: 1000;
+}
+
+.notifHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e293b;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.notifEmpty {
+  padding: 2rem;
+  text-align: center;
+  color: #94a3b8;
+}
+
+.notifItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.notifItem:hover {
+  background: #f8fafc;
+}
+
+.notifItem:last-child {
+  border-bottom: none;
+}
+
+.notifDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-top: 4px;
+  flex-shrink: 0;
+}
+
+.dotSuccess { background: #22c55e; }
+.dotDanger { background: #ef4444; }
+.dotInfo { background: #3b82f6; }
+.dotWarning { background: #f59e0b; }
+.dotNeutral { background: #94a3b8; }
+
+.notifContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.notifRma {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1e293b;
+}
+
+.notifLabel {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.notifWhen {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.markAllRead {
+  background: none;
+  border: none;
+  color: #3b82f6;
+  font-size: 0.8rem;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+  margin-left: auto;
+  font-weight: 400;
+  transition: color 0.15s;
+}
+
+.markAllRead:hover {
+  color: #1d4ed8;
 }

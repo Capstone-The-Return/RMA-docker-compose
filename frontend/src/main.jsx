@@ -15,6 +15,8 @@ import EmployeePage from "./pages/EmployeePage/EmployeePage";
 import TechnicalPage from "./pages/TechnicalPage/TechnicalPage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import ManagerPage from "./pages/ManagerPage/ManagerPage";
+
 
 const router = createBrowserRouter([
   {
@@ -45,6 +47,10 @@ const router = createBrowserRouter([
   {
     path: "technicianDashboard",
     element: <TechnicalPage />,
+  },
+    {
+    path: "managerDashboard",
+    element: <ManagerPage />, 
   },
 ]);
 

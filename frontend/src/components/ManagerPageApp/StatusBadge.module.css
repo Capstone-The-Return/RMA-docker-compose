@@ -1,0 +1,14 @@
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  border: 1px solid transparent;
+}
+
+.pending { background: #fef9c3; color: #854d0e; border-color: #fde68a; }
+.in-repair { background: #ffedd5; color: #9a3412; border-color: #fdba74; }
+.approved { background: #dbeafe; color: #1d4ed8; border-color: #bfdbfe; }
+.completed { background: #dcfce7; color: #166534; border-color: #bbf7d0; }
+.rejected { background: #fee2e2; color: #b91c1c; border-color: #fecaca; }

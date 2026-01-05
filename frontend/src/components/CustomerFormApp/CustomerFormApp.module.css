@@ -6,6 +6,7 @@
 
 
 .page {
+  /*flex: 1; */
   width: 100%;
   padding: 22px;
   background: #f3f5f7;
@@ -16,8 +17,8 @@
   margin: 0 auto 14px auto;
 }
 
-body{
-  font-family:Arial, Helvetica, sans-serif
+body {
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .title {
@@ -25,6 +26,7 @@ body{
   font-weight: 700;
   color: black;
   margin: 0;
+  text-align: center;
 }
 
 .subtitle {
@@ -34,7 +36,7 @@ body{
 }
 
 .card {
-  max-width: 980px;
+  max-width: 1200px;
   margin: 0 auto;
   background: white;
   border: 1px solid #e2e8f0;
@@ -42,6 +44,8 @@ body{
   padding: 18px;
   box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
   overflow-x: hidden; /* Το μεταφέραμε εδώ */
+  position: relative;
+  z-index: 10;
 }
 
 .alert {
@@ -118,11 +122,11 @@ body{
   display: block;
   min-height: 90px;
   height: 90px;
-  resize: vertical; 
+  resize: vertical;
   margin: 0;
 }
 
-/* Full width για το div που περιεχει το textarea */
+/* Full width για το div που περιεχει το textarea */ 
 .full {
   grid-column: 1 / -1;
 }
@@ -138,7 +142,6 @@ body{
   font-size: 14px;
 }
 
-/* Actions Buttons */
 .actions {
   margin-top: 16px;
   display: flex;
@@ -177,4 +180,25 @@ body{
 .btnSecondary:disabled {
   opacity: 0.65;
   cursor: not-allowed;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.snowContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+.card {
+  position: relative;
+  z-index: 10;
 }

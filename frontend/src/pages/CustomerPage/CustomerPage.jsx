@@ -3,13 +3,11 @@ import CustomerFormApp from '../../components/CustomerFormApp/CustomerFormApp.js
 import FooterApp from '../../components/FooterApp/FooterApp.jsx';
 
 export default function CustomerPage() {
-  
-
   return (
     <>
       <AppBar />
       <CustomerFormApp />
       <FooterApp />
     </>
-  )
-};
+  );
+}

@@ -1,3 +1,4 @@
+/* 1. MAIN LAYOUT & FONTS */
 .technical {
   max-width: 1200px;
   margin: 0 auto;
@@ -5,19 +6,33 @@
   font-family: 'Poppins', sans-serif;
 }
 
+/* 2. HEADER SECTION */
 .header {
   display: flex;
+  justify-content: space-between; 
   align-items: center;
-  gap: 1rem;
   margin-bottom: 2rem;
 }
 
-.header .icon {
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
+.icon {
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
   padding: 0.75rem;
   border-radius: 10px;
   font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 
 .header h2 {
@@ -31,6 +46,135 @@
   font-size: 0.95rem;
 }
 
+/* 3. NOTIFICATIONS (BUTTON & DROPDOWN) */
+
+/* Wrapper to position the dropdown relative to the button */
+.notifWrap {
+  position: relative;
+}
+
+/* Notification Button - Resized to match "All Statuses" height */
+.tabBtn {
+  background: white;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  padding: 10px 14px; /* Reduced padding for compact look */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem; 
+  line-height: 1;   
+  transition: all 0.2s;
+}
+
+.tabBtn:hover {
+  background: #f3f4f6;
+  border-color: #9ca3af;
+}
+
+.bell {
+  font-size: 1rem;
+}
+
+/* Red Badge Counter */
+.badge {
+  background: #ef4444;
+  color: white;
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 99px;
+  font-weight: bold;
+}
+
+/* Dropdown Menu Box */
+.dropdown {
+  position: absolute;
+  top: calc(100% + 10px); /* Spacing from button */
+  right: 0;
+  width: 350px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdownEmpty {
+  padding: 20px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Individual Notification Item */
+.dropdownItem {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.1s;
+}
+
+.dropdownItem:hover {
+  background: #f9fafb;
+}
+
+/* Status Dot (Orange for Pending) */
+.dropdownDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f59e0b; 
+  flex-shrink: 0;
+}
+
+.dropdownMain {
+  flex: 1;
+}
+
+.dropdownTitle {
+  font-weight: bold;
+  display: block;
+  font-size: 0.9rem;
+  color: #1f2937;
+}
+
+.dropdownSub {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.dropdownWhen {
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.dropdownViewAll {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #f9fafb;
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.dropdownViewAll:hover {
+  background: #eff6ff;
+}
+
+/* 4. FILTERS & LIST TITLE */
 .filters {
   display: flex;
   gap: 1rem;
@@ -42,26 +186,117 @@
   padding: 0.75rem 1rem;
   border-radius: 10px;
   border: 1px solid #d1d5db;
+  font-family: inherit;
 }
 
 .filters select {
   padding: 0.75rem 1rem;
   border-radius: 10px;
   border: 1px solid #d1d5db;
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .title h3 {
   margin-bottom: 0.3rem;
+  font-size: 1.2rem;
 }
 
 .title p {
   color: #6b7280;
   font-size: 0.95rem;
 }
-.icon {
-  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+
+/*  5. MODAL (POPUP) STYLES */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5); /* Semi-transparent backdrop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  backdrop-filter: blur(2px);
+}
+
+.modalContent {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 450px;
+  box-shadow: 0 20px 25px rgba(0,0,0,0.1);
+  animation: fadeIn 0.2s ease-out;
+}
+
+.modalContent h3 {
+  margin-top: 0;
+  color: #111827;
+}
+
+.modalNoteLabel {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.modalTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+}
+
+.modalTextarea:focus {
+  outline: 2px solid #0f2027;
+  border-color: transparent;
+}
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+/* Confirm Button - Matches your brand gradient theme */
+.confirmBtn {
+  background: #0f2027; 
   color: white;
-  padding: 0.75rem;
-  border-radius: 10px;
-  font-size: 1.3rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.confirmBtn:hover {
+  opacity: 0.9;
+}
+
+.cancelBtn {
+  background: white;
+  border: 1px solid #d1d5db;
+  color: #374151;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancelBtn:hover {
+  background: #f3f4f6;
+}
+
+/* Simple animation for the modal */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }

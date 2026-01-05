@@ -1,256 +1,416 @@
 .page {
+  width: 100%;
   max-width: 1100px;
   margin: 0 auto;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: #0f172a;
+  padding: 28px 16px 50px;
+  color: #1f2937;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 .portalHeader {
   display: flex;
+  align-items: flex-start;
   justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+  gap: 18px;
+  margin-bottom: 22px;
 }
 
 .portalTitle {
   margin: 0;
-  font-size: clamp(24px, 2.3vw, 34px);
-  letter-spacing: -0.02em;
+  font-size: 40px;
+  line-height: 1.15;
+  font-weight: 400; /* NO bold */
+  letter-spacing: 0.2px;
 }
 
 .portalSubtitle {
   margin: 6px 0 0;
-  color: #475569;
-  font-size: 14px;
+  color: #6b7280;
+  font-weight: 400;
 }
 
 .portalActions {
   display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
   align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
+/* ====== TABS (employee-like) ====== */
+/* Inactive = plain text, no shadow box */
 .tabBtn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  font-size: 18px;
+  font-weight: 400; /* NO bold */
   padding: 10px 14px;
   border-radius: 10px;
-  border: 1px solid #cbd5e1;
-  background: #fff;
   cursor: pointer;
-  font-weight: 700;
-  font-size: 13px;
+}
+
+.tabBtn:hover {
+  color: #1f2937;
+  background: transparent; /* δεν αλλάζει σε άσπρο */
 }
 
 .tabBtnActive {
-  background: #0f172a;
-  border-color: #0f172a;
-  color: #fff;
+  background: #1e4a57;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14); /* μόνο στο active, όχι “γύρω από όλα” */
 }
 
-.bell {
-  margin-right: 6px;
+.tabBtnActive:hover {
+  background: #1e4a57; /* μένει ίδιο */
+  color: #ffffff;
 }
 
+.iconBtn {
+  appearance: none;
+  border: none;
+  background: transparent;
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #6b7280;
+}
+
+.iconBtn:hover {
+  background: transparent; /* δεν “ασπρίζει” */
+  color: #1f2937;
+}
+
+.iconBtnActive {
+  background: #1e4a57;
+  color: #ffffff;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.14);
+}
+
+.iconBtnActive:hover {
+  background: #1e4a57;
+  color: #ffffff;
+}
+
+.icon {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* Notifications uses same style but keep name */
+.notifBtn {
+  composes: tabBtn;
+}
+
+/* ====== DROPDOWN (μην πειραχτεί) ====== */
+.notifWrap {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 10px);
+  width: 520px;
+  max-width: min(520px, 92vw);
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.dropdownEmpty {
+  padding: 14px;
+  color: #6b7280;
+}
+
+.dropdownItem {
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 10px 1fr auto;
+  gap: 12px;
+  align-items: center;
+  padding: 12px 14px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.dropdownItem:hover {
+  background: #f9fafb;
+}
+
+.dropdownDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+}
+
+.dropdownDotSuccess { background: #2e7d32; }
+.dropdownDotDanger { background: #c62828; }
+.dropdownDotInfo { background: #1565c0; }
+.dropdownDotWarning { background: #f59e0b; }
+.dropdownDotNeutral { background: #9ca3af; }
+
+.dropdownMain {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dropdownTitle {
+  color: #111827;
+  font-weight: 400;
+}
+
+.dropdownSub {
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.dropdownWhen {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.dropdownViewAll {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 12px 14px;
+  cursor: pointer;
+  text-align: left;
+  color: #111827;
+  font-weight: 400;
+}
+
+.dropdownViewAll:hover {
+  background: #f9fafb;
+}
+
+/* ====== COMMON ====== */
 .sectionTitle {
-  margin: 0 0 10px;
-  font-size: 20px;
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 400; /* NO bold */
 }
 
+.emph {
+  font-weight: 500; /* όχι bold */
+}
+
+/* ====== SEARCH CARD ====== */
 .searchCard {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 16px;
-  margin-bottom: 14px;
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
 .form {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
 }
 
 .label {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  font-weight: 700;
   font-size: 13px;
-  min-width: 260px;
+  color: #374151;
+  font-weight: 400;
   flex: 1;
+  min-width: 280px;
 }
 
 .input {
-  padding: 10px 12px;
-  border: 1px solid #d1d5db;
+  height: 42px;
   border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 0 12px;
+  outline: none;
   font-size: 14px;
+  font-weight: 400;
+}
+
+.input:focus {
+  border-color: #9ca3af;
 }
 
 .actions {
   display: flex;
   gap: 10px;
-  align-items: center;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  height: 42px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  font-weight: 400; /* NO bold */
 }
 
 .primaryBtn {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid #0f172a;
-  background: #0f172a;
-  color: #fff;
-  cursor: pointer;
-  font-weight: 800;
+  background: #1e4a57;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+.primaryBtn:hover {
+  background: #1e4a57; /* μένει ίδιο */
 }
 
 .secondaryBtn {
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid #d1d5db;
-  background: #fff;
-  cursor: pointer;
-  font-weight: 800;
+  background: #ffffff;
+  color: #111827;
 }
 
-.primaryBtn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+.secondaryBtn:hover {
+  background: #f9fafb;
 }
 
 .alertError {
   margin-top: 12px;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid #fecaca;
-  background: #fef2f2;
+  background: #fee2e2;
   color: #7f1d1d;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .alertOk {
   margin-top: 12px;
   padding: 10px 12px;
   border-radius: 12px;
-  border: 1px solid #bbf7d0;
-  background: #f0fdf4;
+  background: #e7f5ee;
   color: #14532d;
-  font-weight: 700;
+  font-weight: 400;
 }
 
+/* ====== RESULT CARD + THEMES (ΑΠΟ ΕΔΩ παίρνει χρώμα timeline) ====== */
 .resultCard {
-  background: #fff;
+  background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 16px;
-  padding: 16px;
+  padding: 18px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+  /* default */
+  --accent: #1e4a57;
 }
 
-.resultCard[data-theme="success"] { border-color: #bbf7d0; }
-.resultCard[data-theme="danger"] { border-color: #fecaca; }
-.resultCard[data-theme="warning"] { border-color: #fde68a; }
-.resultCard[data-theme="info"] { border-color: #bfdbfe; }
+.resultCard[data-theme="warning"] { --accent: #f59e0b; }
+.resultCard[data-theme="info"] { --accent: #1565c0; }
+.resultCard[data-theme="success"] { --accent: #2e7d32; }
+.resultCard[data-theme="danger"] { --accent: #c62828; }
+.resultCard[data-theme="neutral"] { --accent: #9ca3af; }
 
 .resultHeader {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 8px;
 }
 
 .resultTitle {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 400; /* NO bold */
 }
 
 .resultSub {
   margin: 6px 0 0;
-  color: #475569;
-  font-size: 13px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* ====== BADGES ====== */
+.badgeGroup {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .badge {
-  padding: 8px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  font-weight: 900;
+  padding: 7px 12px;
   font-size: 13px;
+  font-weight: 400; /* NO bold */
+  border: 1px solid transparent;
+  white-space: nowrap;
 }
 
-.badgeNeutral {}
+.badgeSuccess { background: #e7f5ee; color: #14532d; border-color: #cce8db; }
+.badgeDanger { background: #fee2e2; color: #7f1d1d; border-color: #fecaca; }
+.badgeInfo { background: #e7f0ff; color: #0b3b8a; border-color: #c7dafc; }
+.badgeWarning { background: #fff3db; color: #7c4a03; border-color: #fde6b7; }
+.badgeNeutral { background: #f3f4f6; color: #374151; border-color: #e5e7eb; }
 
-.badgeSuccess {
-  border-color: #bbf7d0;
-  background: #f0fdf4;
-  color: #14532d;
-}
+.badgeSoftSuccess { background: #f2fbf6; color: #14532d; border-color: #d9f2e4; }
+.badgeSoftDanger { background: #fff1f2; color: #7f1d1d; border-color: #ffd3d8; }
+.badgeSoftInfo { background: #f1f6ff; color: #0b3b8a; border-color: #d9e6ff; }
+.badgeSoftWarning { background: #fff8e8; color: #7c4a03; border-color: #ffe9c4; }
+.badgeSoftNeutral { background: #fafafa; color: #374151; border-color: #eeeeee; }
 
-.badgeDanger {
-  border-color: #fecaca;
-  background: #fef2f2;
-  color: #7f1d1d;
-}
-
-.badgeWarning {
-  border-color: #fde68a;
-  background: #fffbeb;
-  color: #92400e;
-}
-
-.badgeInfo {
-  border-color: #bfdbfe;
-  background: #eff6ff;
-  color: #1e3a8a;
-}
-
+/* ====== TIMELINE (ΕΔΩ διορθώνεται η “μπλε μπάρα” -> παίρνει --accent) ====== */
 .timeline {
-  margin: 14px 0 18px;
-  --accent: #0f172a;
+  margin: 12px 0 14px;
 }
 
-.timeline[data-theme="success"] { --accent: #16a34a; }
-.timeline[data-theme="danger"] { --accent: #dc2626; }
-.timeline[data-theme="warning"] { --accent: #d97706; }
-.timeline[data-theme="info"] { --accent: #2563eb; }
 
 .timelineTop {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .topItem {
   display: flex;
   align-items: center;
-  flex: 1;
+  width: 100%;
 }
 
 .circle {
-  width: 34px;
-  height: 34px;
+  width: 28px;
+  height: 28px;
   border-radius: 999px;
-  border: 2px solid #cbd5e1;
+  border: 2px solid #d1d5db;
   display: grid;
   place-items: center;
-  font-weight: 900;
-  color: transparent;
-  background: #fff;
-  flex: 0 0 auto;
+  color: #ffffff;
+  font-size: 14px;
+  background: #ffffff;
+  font-weight: 400;
 }
 
 .circleActive {
   border-color: var(--accent);
   background: var(--accent);
-  color: #fff;
 }
 
 .connector {
-  flex: 1;
-  height: 3px;
-  background: #cbd5e1;
+  height: 4px;
+  width: 100%;
+  background: #e5e7eb;
   margin: 0 10px;
   border-radius: 999px;
 }
@@ -262,315 +422,288 @@
 .timelineLabels {
   display: flex;
   justify-content: space-between;
-  margin-top: 8px;
-  gap: 10px;
+  margin-top: 10px;
 }
 
 .stepLabel {
-  flex: 1;
+  width: 100%;
   text-align: center;
-  font-size: 12px;
-  color: #64748b;
-  font-weight: 800;
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .stepLabelActive {
-  color: var(--accent);
+  color: #111827;
 }
 
+/* ====== DETAILS GRID ====== */
 .detailsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  margin-top: 8px;
+  margin-top: 12px;
+}
+
+@media (max-width: 820px) {
+  .detailsGrid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .field {
-  border: 1px solid #f1f5f9;
-  background: #f8fafc;
+  background: #fbfbfb;
+  border: 1px solid #eceff3;
   border-radius: 14px;
   padding: 12px;
-  min-width: 0;
 }
 
 .fieldLabel {
+  color: #6b7280;
   font-size: 12px;
-  color: #64748b;
-  font-weight: 800;
+  font-weight: 400;
   margin-bottom: 6px;
 }
 
 .fieldValue {
-  font-weight: 900;
-  overflow-wrap: anywhere;
+  color: #111827;
+  font-weight: 400;
 }
 
 .block {
-  margin-top: 14px;
+  margin-top: 12px;
+  background: #fbfbfb;
+  border: 1px solid #eceff3;
+  border-radius: 14px;
+  padding: 12px;
 }
 
 .blockLabel {
+  color: #6b7280;
   font-size: 12px;
-  color: #64748b;
-  font-weight: 900;
-  margin-bottom: 8px;
+  font-weight: 400;
+  margin-bottom: 6px;
 }
 
 .blockValue {
-  padding: 12px;
-  border: 1px solid #f1f5f9;
-  border-radius: 14px;
-  background: #fff;
+  color: #111827;
+  font-weight: 400;
 }
 
-.blockValueMuted {
-  padding: 12px;
-  border: 1px dashed #cbd5e1;
-  border-radius: 14px;
-  background: #f8fafc;
-  color: #64748b;
-  font-weight: 800;
-}
-
+/* ====== LIST (View My Requests) ====== */
 .listWrap {
   margin-top: 6px;
 }
 
 .listHeaderRow {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 10px;
+  margin-bottom: 14px;
 }
 
 .cardsGrid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 16px;
 }
 
+@media (max-width: 900px) {
+  .cardsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ticket colors by status + left bar color (όπως employee) */
 .requestCard {
-  text-align: left;
+  position: relative;
   border: 1px solid #e5e7eb;
-  background: #fff;
   border-radius: 16px;
-  padding: 14px;
+  background: #ffffff;
+  padding: 16px 16px 14px 16px;
   cursor: pointer;
+  text-align: left;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+  /* default */
+  --accent: #1e4a57;
+  --ticketText: #1e4a57;
+}
+
+/* theme mapping */
+.requestCard[data-theme="warning"] { --accent: #f59e0b; --ticketText: #7c4a03; }
+.requestCard[data-theme="info"] { --accent: #1565c0; --ticketText: #0b3b8a; }
+.requestCard[data-theme="success"] { --accent: #2e7d32; --ticketText: #14532d; }
+.requestCard[data-theme="danger"] { --accent: #c62828; --ticketText: #7f1d1d; }
+.requestCard[data-theme="neutral"] { --accent: #9ca3af; --ticketText: #374151; }
+
+.requestCard::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background: var(--accent); /* ✅ η μπάρα μέσα σε κάθε ticket */
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
 }
 
 .requestCard:hover {
-  border-color: #94a3b8;
+  /* μικρό hover, χωρίς να αλλάζει χρώματα/άσπρισμα */
+  transform: translateY(-1px);
 }
 
 .cardTop {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 8px;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 10px;
 }
 
 .cardTitle {
-  font-weight: 950;
-  font-size: 15px;
+  font-size: 16px;
+  color: #6b7280; /* category = ΓΚΡΙ */
+  font-weight: 400; /* NO bold */
 }
 
-.badgeSmall {
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  background: #f8fafc;
-  font-weight: 900;
-  font-size: 12px;
-  white-space: nowrap;
+.cardMeta,
+.cardIssue {
+  color: var(--ticketText); /* ✅ όλα τα υπόλοιπα στο ίδιο χρώμα status */
+  font-weight: 400;
+  font-size: 14px;
 }
-
-.badgeSmallNeutral {}
-.badgeSmallSuccess { border-color: #bbf7d0; background: #f0fdf4; color: #14532d; }
-.badgeSmallDanger { border-color: #fecaca; background: #fef2f2; color: #7f1d1d; }
-.badgeSmallWarning { border-color: #fde68a; background: #fffbeb; color: #92400e; }
-.badgeSmallInfo { border-color: #bfdbfe; background: #eff6ff; color: #1e3a8a; }
 
 .cardMeta {
   display: grid;
-  gap: 4px;
-  color: #0f172a;
-  font-weight: 700;
-  font-size: 13px;
+  gap: 6px;
+  margin-bottom: 10px;
 }
 
 .metaLabel {
-  color: #64748b;
-  font-weight: 900;
+  color: inherit; /* όχι γκρι, να είναι ίδιο χρώμα status */
+  font-weight: 400;
 }
 
-.cardIssue {
-  margin-top: 10px;
-  color: #0f172a;
-  font-weight: 700;
-  font-size: 13px;
-}
-
-.newWrap {
+/* ====== PROFILE ====== */
+.profileWrap {
   margin-top: 6px;
 }
 
-/* ✅ Notifications dropdown box */
-.notifWrap {
-  position: relative;
-}
-
-.dropdown {
-  position: absolute;
-  right: 0;
-  top: calc(100% + 8px);
-  width: min(520px, 92vw);
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
-  box-shadow: 0 14px 38px rgba(2, 6, 23, 0.12);
-  overflow: hidden;
-  z-index: 50;
-}
-
-.dropdownEmpty {
-  padding: 14px;
-  color: #64748b;
-  font-weight: 800;
-}
-
-.dropdownItem {
-  width: 100%;
-  display: grid;
-  grid-template-columns: 10px 1fr auto;
-  gap: 10px;
-  align-items: center;
-  padding: 12px 14px;
-  border: 0;
-  background: #fff;
-  cursor: pointer;
-  text-align: left;
-}
-
-.dropdownItem:hover {
-  background: #f8fafc;
-}
-
-.dropdownDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: 1px solid #e5e7eb;
-  background: #cbd5e1;
-}
-
-.dropdownDotNeutral {}
-.dropdownDotSuccess { background: #16a34a; border-color: #16a34a; }
-.dropdownDotDanger { background: #dc2626; border-color: #dc2626; }
-.dropdownDotWarning { background: #d97706; border-color: #d97706; }
-.dropdownDotInfo { background: #2563eb; border-color: #2563eb; }
-
-.dropdownMain {
-  display: grid;
-  gap: 2px;
-  min-width: 0;
-}
-
-.dropdownTitle {
-  font-weight: 950;
-  font-size: 13px;
-}
-
-.dropdownSub {
-  font-weight: 800;
-  font-size: 12px;
-  color: #475569;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.dropdownWhen {
-  font-weight: 800;
-  font-size: 12px;
-  color: #64748b;
-  white-space: nowrap;
-}
-
-.dropdownViewAll {
-  width: 100%;
-  border: 0;
-  border-top: 1px solid #e5e7eb;
-  background: #fff;
-  padding: 12px 14px;
-  cursor: pointer;
-  font-weight: 950;
-  text-align: left;
-}
-
-.dropdownViewAll:hover {
-  background: #f8fafc;
-}
-
-/* Notifications page list */
-.notifList {
-  display: grid;
-  gap: 10px;
-}
-
-.notifRow {
-  border: 1px solid #e5e7eb;
-  background: #fff;
-  border-radius: 14px;
-  padding: 12px 14px;
-  cursor: pointer;
+.profileHeaderRow {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 12px;
-  text-align: left;
+  margin-bottom: 14px;
 }
 
-.notifRow:hover {
-  border-color: #94a3b8;
-}
-
-.notifLeft {
+.profileGrid {
   display: grid;
-  gap: 4px;
-  min-width: 0;
-}
-
-.notifTitle {
-  font-weight: 950;
-}
-
-.notifSub {
-  font-weight: 800;
-  color: #475569;
-  font-size: 13px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.notifWhen {
-  font-weight: 800;
-  color: #64748b;
-  font-size: 12px;
-  white-space: nowrap;
-  align-self: center;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
 }
 
 @media (max-width: 900px) {
-  .detailsGrid {
+  .profileGrid {
     grid-template-columns: 1fr;
   }
-  .cardsGrid {
-    grid-template-columns: 1fr;
+}
+
+.profileCard,
+.profileCardWide {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.profileCardWide {
+  grid-column: span 3;
+}
+
+@media (max-width: 900px) {
+  .profileCardWide {
+    grid-column: span 1;
   }
-  .label {
-    min-width: 220px;
-  }
+}
+
+.profileLabel {
+  color: #6b7280;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 8px;
+}
+
+.profileValue {
+  color: #111827;
+  font-weight: 400;
+}
+
+.profileInput {
+  width: 100%;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 0 12px;
+  outline: none;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.profileInput:focus {
+  border-color: #9ca3af;
+}
+
+.profileActions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profileBtn,
+.profileBtnPrimary,
+.profileBtnGhost {
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.profileBtn {
+  background: #ffffff;
+  color: #111827;
+}
+
+.profileBtn:hover {
+  background: #f9fafb;
+}
+
+.profileBtnPrimary {
+  background: #1e4a57;
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.profileBtnPrimary:hover {
+  background: #1e4a57;
+}
+
+.profileBtnGhost {
+  background: #ffffff;
+  color: #111827;
+}
+
+.profileBtnGhost:hover {
+  background: #f9fafb;
+}
+
+/* wrappers */
+.newWrap {
+  margin-top: 6px;
 }

@@ -11,6 +11,7 @@
       "id": "2",
       "role": "technician",
       "name": "Tech One",
+      "email": "techone@test.com",
       "password": "technical123"
     },
     {
@@ -23,8 +24,16 @@
     {
       "id": "4",
       "role": "customer",
+      "name": "Customer User",
       "email": "customer@test.com",
       "password": "customer123"
+    },
+    {
+      "id": "5",
+      "role": "manager",
+      "name": "Manager Admin",
+      "email": "manager@test.com",
+      "password": "manager123"
     }
   ],
   "tickets": [
@@ -35,25 +44,28 @@
         "name": "Maria P."
       },
       "product": {
-        "name": "Laptop"
+        "name": "Laptop",
+        "category": "Computers"
       },
-      "status": "pending",
+      "status": "approved",
       "warranty": true,
       "issue": "Screen flickering",
       "assigned_to": "Tech One",
-      "priority": "high",
+      "priority": "High",
       "notes": "Customer reported issue started after recent update.",
       "phone": "+30 2101234567",
-      "email": "akes@gmail.com",
+      "email": "mariap@gmail.com",
       "address": "123 Main St, Athens, Greece",
       "serial_number": "SN123456789",
       "purchase_date": "2023-11-15",
       "photo_url": "https://example.com/photos/rma-001.jpg",
-      "owner": "Anasasia Kesisi",
-      "last_updated": "2024-06-10T15:30:00Z",
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T17:38:58.018Z",
       "created_at": "2024-06-01T10:00:00Z",
       "technical_status": null,
-      "record_type": "repair"
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Athens"
     },
     {
       "id": "2",
@@ -62,24 +74,28 @@
         "name": "John D."
       },
       "product": {
-        "name": "TV"
+        "name": "1231544",
+        "category": "TV"
       },
       "status": "in-repair",
       "warranty": true,
       "issue": "Screen flickering",
       "assigned_to": "Tech One",
-      "priority": "high",
+      "priority": "High",
       "notes": "Customer reported issue started after recent update.",
       "phone": "+30 2101234567",
-      "email": "akes@gmail.com",
-      "address": "123 Main St, Athens, Greece",
-      "serial_number": "SN123456789",
+      "email": "johnd@gmail.com",
+      "address": "456 Oak Ave, Athens, Greece",
+      "serial_number": "SN234567890",
       "purchase_date": "2023-11-15",
-      "photo_url": "https://example.com/photos/rma-001.jpg",
-      "owner": "Anasasia Kesisi",
-      "last_updated": "2024-06-10T15:30:00Z",
+      "photo_url": "https://example.com/photos/rma-002.jpg",
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T17:38:50.527Z",
       "created_at": "2024-06-01T10:00:00Z",
-      "technical_status": "Completed"
+      "technical_status": "Pending",
+      "technical_notes": "change my mind",
+      "record_type": "repair",
+      "store": "Athens"
     },
     {
       "id": "3",
@@ -88,25 +104,28 @@
         "name": "Anna K."
       },
       "product": {
-        "name": "Mouse"
+        "name": "08977897",
+        "category": "Peripherals"
       },
       "status": "in-repair",
       "warranty": true,
       "issue": "Screen flickering",
       "assigned_to": "Tech Two",
-      "priority": "high",
+      "priority": "High",
       "notes": "Customer reported issue started after recent update.",
       "phone": "+30 2101234567",
-      "email": "akes@gmail.com",
-      "address": "123 Main St, Athens, Greece",
-      "serial_number": "SN123456789",
+      "email": "annak@gmail.com",
+      "address": "789 Pine Rd, Thessaloniki, Greece",
+      "serial_number": "SN345678901",
       "purchase_date": "2023-11-15",
-      "photo_url": "https://example.com/photos/rma-001.jpg",
-      "owner": "Anasasia Kesisi",
-      "last_updated": "2024-06-10T15:30:00Z",
+      "photo_url": "https://example.com/photos/rma-003.jpg",
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T15:17:37.073Z",
       "created_at": "2024-06-01T10:00:00Z",
-      "technical_status": "Approved",
-      "record_type": "repair"
+      "technical_status": "In Repair",
+      "technical_notes": "heyyyy",
+      "record_type": "repair",
+      "store": "Thessaloniki"
     },
     {
       "id": "4",
@@ -115,25 +134,28 @@
         "name": "Nick S."
       },
       "product": {
-        "name": "Keyboard"
+        "name": "6325236",
+        "category": "Peripherals"
       },
       "status": "completed",
       "warranty": true,
       "issue": "Screen flickering",
       "assigned_to": "Tech Two",
-      "priority": "high",
+      "priority": "High",
       "notes": "Customer reported issue started after recent update.",
       "phone": "+30 2101234567",
-      "email": "akes@gmail.com",
-      "address": "123 Main St, Athens, Greece",
-      "serial_number": "SN123456789",
+      "email": "nicks@gmail.com",
+      "address": "321 Elm St, Athens, Greece",
+      "serial_number": "SN456789012",
       "purchase_date": "2023-11-15",
-      "photo_url": "https://example.com/photos/rma-001.jpg",
-      "owner": "Anasasia Kesisi",
-      "last_updated": "2024-06-10T15:30:00Z",
+      "photo_url": "https://example.com/photos/rma-004.jpg",
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T15:34:04.938Z",
       "created_at": "2024-06-01T10:00:00Z",
-      "technical_status": "completed",
-      "record_type": "repair"
+      "technical_status": "In Repair",
+      "technical_notes": "hey you",
+      "record_type": "repair",
+      "store": "Athens"
     },
     {
       "id": "5",
@@ -142,25 +164,28 @@
         "name": "Dimi S."
       },
       "product": {
-        "name": "Keyboard"
+        "name": "6543526",
+        "category": "Peripherals"
       },
       "status": "in-repair",
       "warranty": true,
       "issue": "Screen flickering",
       "assigned_to": "Tech Two",
-      "priority": "high",
+      "priority": "High",
       "notes": "Customer reported issue started after recent update.",
       "phone": "+30 2101234567",
-      "email": "akes@gmail.com",
-      "address": "123 Main St, Athens, Greece",
-      "serial_number": "SN123456789",
+      "email": "dimis@gmail.com",
+      "address": "654 Maple Dr, Athens, Greece",
+      "serial_number": "SN567890123",
       "purchase_date": "2023-11-15",
-      "photo_url": "https://example.com/photos/rma-001.jpg",
-      "owner": "Anasasia Kesisi",
-      "last_updated": "2024-06-10T15:30:00Z",
+      "photo_url": "https://example.com/photos/rma-005.jpg",
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T15:33:07.281Z",
       "created_at": "2024-06-01T10:00:00Z",
       "technical_status": null,
-      "record_type": "repair"
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Athens"
     },
     {
       "id": "6",
@@ -169,15 +194,28 @@
         "name": "Dimi S."
       },
       "product": {
-        "name": "Keyboard"
+        "name": "4364684",
+        "category": "Peripherals"
       },
-      "date": "2024-12-03",
-      "issue": "Screen flickering intermittently, especially when displaying dark content",
       "status": "in-repair",
+      "warranty": true,
+      "issue": "Screen flickering intermittently, especially when displaying dark content",
+      "assigned_to": "Unassigned",
       "priority": "High",
-      "assignedTo": "Unassigned",
-      "technical_status": "Pending",
-      "record_type": "repair"
+      "notes": null,
+      "phone": "+30 2109876543",
+      "email": "dimis2@gmail.com",
+      "address": "987 Cedar Ln, Thessaloniki, Greece",
+      "serial_number": "SN678901234",
+      "purchase_date": "2024-10-01",
+      "photo_url": null,
+      "owner": "Employee Admin",
+      "last_updated": "2024-12-03T10:00:00.000Z",
+      "created_at": "2024-12-03T10:00:00.000Z",
+      "technical_status": "Approved",
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Thessaloniki"
     },
     {
       "id": "7",
@@ -186,31 +224,119 @@
         "name": "Dimi S."
       },
       "product": {
-        "name": "Keyboard"
+        "name": "64352412",
+        "category": "Peripherals"
       },
-      "date": "2024-12-02",
-      "issue": "Left speaker producing crackling sound at high volume",
       "status": "in-repair",
+      "warranty": false,
+      "issue": "Left speaker producing crackling sound at high volume",
+      "assigned_to": "Tech Four",
       "priority": "Medium",
-      "assignedTo": "Technician 001",
+      "notes": null,
+      "phone": "+30 2107654321",
+      "email": "dimis3@gmail.com",
+      "address": "147 Birch Way, Athens, Greece",
+      "serial_number": "SN789012345",
+      "purchase_date": "2024-08-15",
+      "photo_url": null,
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T15:19:05.441Z",
+      "created_at": "2024-12-02T10:00:00.000Z",
       "technical_status": "In Repair",
-      "record_type": "repair"
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Athens"
     },
     {
-      "id": "ed1b",
-      "rma": "RMA-2025-1CE456F3",
+      "id": "512e",
+      "rma": "RMA-2026-3BF6221C",
       "customer": {
-        "name": "sxs scascsac"
+        "name": "keisi test"
       },
       "product": {
-        "name": "5165"
+        "name": "0222",
+        "category": "Other"
       },
-      "status": "approved",
+      "status": "pending",
+      "warranty": true,
+      "issue": "change my mind",
+      "assigned_to": null,
+      "priority": "Low",
+      "notes": null,
+      "phone": "6943527462",
+      "email": "keisi@hotmail.com",
+      "address": null,
+      "serial_number": null,
+      "purchase_date": "2026-01-02",
+      "photo_url": null,
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T17:29:55.876Z",
+      "created_at": "2026-01-04T17:29:55.876Z",
+      "technical_status": null,
+      "technical_notes": null,
       "record_type": "return",
-      "issue": "scascdc dsv",
-      "warranty": "InWarranty",
-      "phone": "62651464165",
-      "email": "ws@gmail.com"
+      "store": "Athens"
+    },
+    {
+      "id": "56c5",
+      "rma": "RMA-2026-DFBCD044",
+      "customer": {
+        "name": "anast anast test"
+      },
+      "product": {
+        "name": "444444",
+        "category": "Other"
+      },
+      "status": "pending",
+      "warranty": true,
+      "issue": "it was broken",
+      "assigned_to": null,
+      "priority": "Low",
+      "notes": null,
+      "phone": "6999341254",
+      "email": "anast@gmail.gr",
+      "address": null,
+      "serial_number": null,
+      "purchase_date": "2025-12-29",
+      "photo_url": null,
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T17:53:26.433Z",
+      "created_at": "2026-01-04T17:53:26.433Z",
+      "technical_status": null,
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Athens"
+    },
+    {
+      "id": "63a5",
+      "rma": "RMA-2026-B1FD5A45",
+      "customer": {
+        "name": "ilien bamp"
+      },
+      "product": {
+        "name": "452452",
+        "category": "TV"
+      },
+      "status": "pending",
+      "warranty": true,
+      "issue": "repaiiiiiiir",
+      "assigned_to": null,
+      "priority": "Low",
+      "notes": null,
+      "phone": "6999341254",
+      "email": "ilienmbap@yopmail.com",
+      "address": null,
+      "serial_number": null,
+      "purchase_date": "2025-12-26",
+      "photo_url": null,
+      "owner": "Employee Admin",
+      "last_updated": "2026-01-04T17:59:01.013Z",
+      "created_at": "2026-01-04T17:59:01.013Z",
+      "technical_status": null,
+      "technical_notes": null,
+      "record_type": "repair",
+      "store": "Thessaloniki"
     }
-  ]
+  ],
+  "notifications": []
 }
