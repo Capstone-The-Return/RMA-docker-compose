@@ -6,6 +6,10 @@ COPY package.json package-lock.json* ./
 RUN npm ci
 
 COPY . .
+
+# Add this line to increase Node.js memory
+ENV NODE_OPTIONS="--max-old-space-size=1024"
+
 RUN npm run build
 
 FROM nginx:alpine
