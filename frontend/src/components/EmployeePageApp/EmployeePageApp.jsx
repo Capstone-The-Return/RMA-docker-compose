@@ -302,7 +302,9 @@ export default function EmployeePageApp() {
             aria-expanded={notifOpen}
             title="Notifications"
           >
-            <FiBell className={style.bellIcon} />
+            {/*<FiBell className={style.bellIcon} />*/}
+            <span className={styles.bell}>🔔</span>
+              Notifications
             {unreadCount > 0 && (
               <span className={style.notifBadge}>
                 {unreadCount > 99 ? '99+' : unreadCount}
