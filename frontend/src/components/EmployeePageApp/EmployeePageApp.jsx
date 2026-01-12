@@ -303,7 +303,7 @@ export default function EmployeePageApp() {
             title="Notifications"
           >
             {/*<FiBell className={style.bellIcon} />*/}
-            <span className={styles.bell}>🔔</span>
+            <span className={style.bell}>🔔</span>
               Notifications
             {unreadCount > 0 && (
               <span className={style.notifBadge}>
