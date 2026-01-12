@@ -165,7 +165,7 @@ export default function TechnicalApp() {
         <div className={styles.notifWrap} ref={notifWrapRef}>
             <button 
               
-              className={style.notifButton}
+              className={styles.notifButton}
               onClick={() => setNotifOpen(!notifOpen)}
             >
               <span className={styles.bell}>🔔</span>
