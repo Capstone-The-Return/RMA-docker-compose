@@ -304,7 +304,7 @@ export default function EmployeePageApp() {
           >
             {/*<FiBell className={style.bellIcon} />*/}
             <span className={style.bell}>🔔</span>
-              Notifications
+            
             {unreadCount > 0 && (
               <span className={style.notifBadge}>
                 {unreadCount > 99 ? '99+' : unreadCount}

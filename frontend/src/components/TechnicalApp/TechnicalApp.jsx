@@ -164,11 +164,12 @@ export default function TechnicalApp() {
         {/* NOTIFICATIONS DROPDOWN */}
         <div className={styles.notifWrap} ref={notifWrapRef}>
             <button 
-              className={styles.tabBtn} 
+              
+              className={style.notifButton}
               onClick={() => setNotifOpen(!notifOpen)}
             >
               <span className={styles.bell}>🔔</span>
-              Notifications
+
               {notifications.length > 0 && <span className={styles.badge}>{notifications.length}</span>}
             </button>
 

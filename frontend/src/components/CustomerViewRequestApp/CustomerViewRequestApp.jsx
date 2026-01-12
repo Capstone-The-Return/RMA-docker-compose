@@ -589,7 +589,8 @@ export default function CustomerViewRequestApp() {
           {/* Notifications dropdown (ΜΟΝΟ dropdown) */}
           <div className={style.notifWrap} ref={notifWrapRef}>
             <button
-              className={`${style.notifBtn} ${notifOpen ? style.tabBtnActive : ""}`}
+              className={style.notifButton}
+              {/*className={`${style.notifBtn} ${notifOpen ? style.tabBtnActive : ""}`}*/}
               onClick={() => setNotifOpen((p) => !p)}
               type="button"
               aria-haspopup="menu"
@@ -598,8 +599,8 @@ export default function CustomerViewRequestApp() {
             >
               <span className={style.icon} aria-hidden="true">
                 🔔
-              </span>{" "}
-              Notifications
+              </span>
+              
             </button>
 
             {notifOpen && (
