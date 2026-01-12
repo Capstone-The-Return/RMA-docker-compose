@@ -1,5 +1,6 @@
 .kanban {
-  display: flex;              
+  display: flex;    
+  justify-content: center;           
   gap: 1.5rem;
   overflow-x: auto;           
   overflow-y: hidden;
@@ -13,8 +14,8 @@
   min-height: 70vh;
 
   flex: 1;
-  min-width: 220px;
-  max-width: 320px;             
+  width: clamp(200px, 18vw, 350px);  
+  min-width: 200px;
 }
 
 /* Sticky Headers */
