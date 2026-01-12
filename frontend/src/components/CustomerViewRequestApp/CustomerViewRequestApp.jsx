@@ -590,7 +590,7 @@ export default function CustomerViewRequestApp() {
           <div className={style.notifWrap} ref={notifWrapRef}>
             <button
               className={style.notifButton}
-              {/*className={`${style.notifBtn} ${notifOpen ? style.tabBtnActive : ""}`}*/}
+              /*className={`${style.notifBtn} ${notifOpen ? style.tabBtnActive : ""}`}*/
               onClick={() => setNotifOpen((p) => !p)}
               type="button"
               aria-haspopup="menu"
